@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+  
+  <!-- HERO START -->
+  <section class="hero">
+    <div class="container">
+      
+      <!-- NAVBAR START -->
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-menu">
+            <p class="navbar-item">
+              <a>About</a>
+            </p>
+            <p class="navbar-item">
+              <a>Portfolio</a>
+            </p>
+            <p class="navbar-item">
+              <a>Contact</a>
+            </p>
+          </div>
+        </div>
+      </nav>
+      <!-- NAVBAR END -->
+      
+      <div class="hero-body">
+        <h1><%= htmlWebpackPlugin.options.section.hero.title %></h1>
+        <p><%= htmlWebpackPlugin.options.section.hero.subtitle %></p>
+      </div>
+    
+      <div class="hero-scroll">
+        <a 
+          class="is-primary">
+          <span style="margin-right:0.5rem;font-size:1.25rem;">
+            <i class="fa fa-arrow-down"></i>
+          </span>
+          <span>Scroll down</span>
+        </a>
+      </div>
+    
+    </div>
+  </section>
+  <!-- HERO END -->
+  
+  <!-- ABOUT START -->
+  <section class="about">
+    <div class="container">
+      <div class="about-title">
+        <h2><%= htmlWebpackPlugin.options.section.about.title %></h2>
+      </div>
+      <div class="about-body">
+        <div class="about-image">
+          <figure class="about-image-figure">
+            <img 
+              class="lozad" 
+              data-src="<%= htmlWebpackPlugin.options.section.about.imageHref %>" 
+              alt="profile image">
+          </figure>
+        </div>
+        <div><%= htmlWebpackPlugin.options.section.about.description %></div>
+      </div>
+    </div>
+  </section>
+  <!-- ABOUT END -->
+  
+  <!-- PROJECTS START -->
+  <section class="projects">
+    <div class="container">
+      <div class="projects-title">
+        <h2><%= htmlWebpackPlugin.options.section.projects.title %></h2>
+      </div>
+        
+      <% htmlWebpackPlugin.options.section.projects.items.forEach((item, i) => { %>
+        <div class="projects-item">
+          <h3 class="projects-item-title"><%= item.title %></h3>
+          <div class="projects-item-body">
+          <% if (((i+1) % 2) == 0) { %>
+            <div class="projects-item-text">
+              <div>
+                <%= item.description %>
+              </div>
+              <div style="padding-top:2rem;">
+                <a class="projects-item-live-button" href="<%= item.liveLink %>">
+                  <strong>Live</strong>
+                </a>
+              </div>
+            </div>
+            <div class="projects-item-image">
+              <a href="<%= item.liveLink %>">
+                <figure class="projects-item-image-figure">
+                  <img class="lozad" data-src="<%= item.imageHref %>" alt="<%= item.title %>">
+                </figure>
+              </a>
+            </div>
+          <% } else { %>
+            <div class="projects-item-image">
+              <a href="<%= item.liveLink %>">
+                <figure class="projects-item-image-figure">
+                  <img class="lozad" data-src="<%= item.imageHref %>" alt="<%= item.title %>">
+                </figure>
+              </a>
+            </div>
+            <div class="projects-item-text">
+              <div>
+                <%= item.description %>
+              </div>
+              <div style="padding-top:2rem;">
+                <a class="projects-item-live-button" href="<%= item.liveLink %>">
+                  <strong>Live</strong>
+                </a>
+              </div>
+            </div>
+          <% } %>
+          </div>
+        </div>
+      <% })%>
+        
+    </div>
+  </section>
+  <!-- PROJECTS END -->
+  
+  <!-- CONTACTS START -->
+  <footer class="contacts">
+    <div class="container">
+      
+      <div class="contacts-title">
+        <h2><%= htmlWebpackPlugin.options.section.contacts.title %></h2>
+      </div>
+      
+      <% if (htmlWebpackPlugin.options.section.contacts.email) { %>
+        <p class="contacts-email">
+          <a href="mailto:<%= htmlWebpackPlugin.options.section.contacts.email %>">
+            <%= htmlWebpackPlugin.options.section.contacts.email %>
+          </a>
+        </p>
+      <% } %>
+      
+      <div class="contacts-list">
+        <% if (htmlWebpackPlugin.options.section.contacts.github) { %>
+          <a 
+            class="contacts-list-item" 
+            href="<%= htmlWebpackPlugin.options.section.contacts.github %>">
+            <i class="fab fa-github"></i>
+          </a>
+        <% } %>
+        <% if (htmlWebpackPlugin.options.section.contacts.twitter) { %>
+          <a 
+            class="contacts-list-item" 
+            href="<%= htmlWebpackPlugin.options.section.contacts.twitter %>">
+            <i class="fab fa-twitter"></i>
+          </a>
+        <% } %>
+      </div>
+      
+      
+      <p class="contacts-footer">
+        <%= htmlWebpackPlugin.options.section.contacts.copyright %>
+      </p>
+      
+    </div>
+  </footer>
+  <!-- CONTACTS END -->
+  
+  </body>
+</html>

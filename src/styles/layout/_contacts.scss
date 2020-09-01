@@ -1,0 +1,54 @@
+.contacts  {
+  width: 100%;
+  background-color: $text-color;
+  color: $light-color;
+}
+
+.contacts > .container {
+  padding: 3rem 1.5rem;
+  color: $light-color;
+  text-align: center;
+  .contacts-title {
+    margin-bottom: 2.5rem;
+    h2 {
+      font-size: 1.5rem;
+      //opacity: 0;
+      //transition: 1s;
+    }
+  }
+  .contacts-email {
+    a {
+      text-decoration: none;
+      color: $light-color;
+      font-weight: 550;
+    }
+  }
+  .contacts-list {
+    display: flex;
+    justify-content: center;
+    .contacts-list-item {
+      margin: 1rem 2rem 2rem 2rem;
+      text-decoration: none;
+      font-size: 1.8rem;
+      color: $light-color;
+      &:hover {
+        transform: scale(1.2, 1.2);
+      }
+    }
+  }
+  .contacts-footer {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: $medium) {
+  .contacts > .container {
+  
+    .contacts-title {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+    
+  }
+}

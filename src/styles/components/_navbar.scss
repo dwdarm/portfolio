@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.navbar > .container {
+  display: none;
+  flex-direction: row;
+  justify-content: flex-end;
+  
+  .navbar-menu {
+    display: flex;
+    flex-direction: row;
+    
+    .navbar-item {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      
+      a {
+        text-decoration: none;
+      }
+    }
+  
+  }
+  
+}
+
+@media screen and (min-width: $medium) {
+  .navbar > .container {
+    display: flex;
+  }
+}

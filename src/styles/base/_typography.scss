@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+a {
+  color: $link-color;
+  text-decoration: underline;
+  cursor: pointer;
+  
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+p {
+  line-height: 1.5rem;
+}

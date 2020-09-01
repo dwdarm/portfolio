@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/* breakpoints */
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
+
+/* colors */
+$primary-color: hsl(217, 71%, 53%);
+$text-color: hsl(0, 0%, 21%);
+$light-color: hsl(0, 0%, 96%);
+$link-color: $text-color;
+$link-hover-color: $primary-color;
+
+/* typography */
+$font-size-normal: 1rem; 
+
+

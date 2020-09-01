@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+.projects  {
+  width: 100%;
+  background-color: $light-color;
+}
+
+.projects > .container {
+  padding: 3rem 1.5rem;
+  .projects-title {
+    margin-bottom: 2.5rem;
+    h2 {
+      font-size: 1.5rem;
+      text-align: center;
+      //opacity: 0;
+      //transition: 1s;
+    }
+  }
+  .projects-item {
+    margin-bottom: 5rem;
+    .projects-item-title {
+      font-size: 1.25rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      //opacity: 0;
+      //transition: 1s;
+    }
+    .projects-item-body {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      .projects-item-image {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        //opacity: 0;
+        //transition: 1s 0.5s;
+      }
+      .projects-item-text {
+        flex: 1;
+        //opacity: 0;
+        //transition: 1s 1s;
+      }
+    }
+    &:nth-child(odd) {
+      .projects-item-body {
+        flex-direction: column-reverse;
+      }
+    }
+    &:nth-child(even) {
+      .projects-item-body {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.projects-item-image-figure {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-top: 56.25%;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 5px 5px 0px rgba(181,181,181,1);
+    -moz-box-shadow: 3px 5px 5px 0px rgba(181,181,181,1);
+    box-shadow: 3px 5px 5px 0px rgba(181,181,181,1);
+  }
+}
+
+.projects-item-live-button {
+  padding: 0.75rem 2rem;
+  margin: 0;
+  color: $primary-color;
+  background-color: $light-color;
+  border: 2px solid $primary-color;
+  text-decoration: none;
+  border-radius: 4px;
+  &:hover {
+    background-color: $primary-color;
+    color: $light-color;
+    border: 0;
+  }
+}
+
+@media screen and (min-width: $medium) {
+  .projects > .container {
+    .projects-title {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+    .projects-item {
+      .projects-item-body {
+        text-align: left;
+        .projects-item-image {
+          min-width: 400px;
+          margin: 0;
+          //margin-right: 3rem;
+        }
+      }
+      &:nth-child(odd) {
+        .projects-item-body {
+          flex-direction: row;
+          .projects-item-image {
+            margin-left: 3rem;
+          }
+        }
+      }
+      &:nth-child(even) {
+        .projects-item-body {
+          flex-direction: row;
+          .projects-item-image {
+            margin-right: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
