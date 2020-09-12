@@ -47,7 +47,7 @@ module.exports = {
     },
     contacts: {
       title: 'CONTACTS',
-      email: 'fajardwidarm@gmail.com',
+      email: 'dwdarm@protonmail.com',
       github: 'https://github.com/dwdarm',
       twitter: 'https://twitter.com/fajardwidarm',
       copyright: '@ 2020 - Developed by Fajar Dwi Darmanto',
