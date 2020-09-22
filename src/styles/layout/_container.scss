@@ -1,8 +1,10 @@
 @charset "utf-8";
 
-$gap: 32px;
+$container-gap: 32px;
 
 .container {
+  position: relative;
+  flex-grow: 1;
   width: 100%;
   padding: 0;
   margin: 0 auto;
@@ -10,12 +12,12 @@ $gap: 32px;
 
 @media screen and (min-width: $medium) {
   .container {
-    width: $medium - (2 * $gap);
+    width: $medium - (2 * $container-gap);
   }
 }
 
 @media screen and (min-width: $large) {
   .container {
-    width: $large - (2 * $gap);
+    width: $large - (2 * $container-gap);
   }
 }

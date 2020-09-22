@@ -10,110 +10,118 @@
   
   <!-- HERO START -->
   <section class="hero">
-    <div class="container">
-      
-      <!-- NAVBAR START -->
-      <nav class="navbar">
-        <div class="container">
-          <div class="navbar-menu">
-            <p class="navbar-item">
-              <a>About</a>
-            </p>
-            <p class="navbar-item">
-              <a>Portfolio</a>
-            </p>
-            <p class="navbar-item">
-              <a>Contact</a>
-            </p>
-          </div>
+    
+    <!-- NAVBAR START -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-menu">
+          <p class="navbar-item">
+            <a>About</a>
+          </p>
+          <p class="navbar-item">
+            <a>Portfolio</a>
+          </p>
+          <p class="navbar-item">
+            <a>Contact</a>
+          </p>
         </div>
-      </nav>
-      <!-- NAVBAR END -->
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
       
-      <div class="hero-body">
-        <h1><%= htmlWebpackPlugin.options.section.hero.title %></h1>
-        <p><%= htmlWebpackPlugin.options.section.hero.subtitle %></p>
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="hero-body-title">
+          <%= htmlWebpackPlugin.options.section.hero.title %>
+        </h1>
+        <p class="hero-body-subtitle">
+          <%= htmlWebpackPlugin.options.section.hero.subtitle %>
+        </p>
+        <a class="button hero-body-action">Know more</a>
       </div>
-    
-      <div class="hero-scroll">
-        <a 
-          class="is-primary">
-          <span style="margin-right:0.5rem;font-size:1.25rem;">
-            <i class="fa fa-arrow-down"></i>
-          </span>
-          <span>Scroll down</span>
-        </a>
-      </div>
-    
     </div>
+    
+      <div class="hero-footer">
+        <div class="container">
+          <a class="scroll-down-icon has-text-primary">
+            <span style="margin-right:0.5rem;font-size:1.75rem;">
+              <i class="fa fa-angle-down"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    
   </section>
   <!-- HERO END -->
   
   <!-- ABOUT START -->
-  <section class="about">
+  <section class="section has-bg-primary has-text-light">
     <div class="container">
-      <div class="about-title">
-        <h2><%= htmlWebpackPlugin.options.section.about.title %></h2>
-      </div>
-      <div class="about-body">
-        <div class="about-image">
-          <figure class="about-image-figure">
-            <img 
-              class="lozad" 
-              data-src="<%= htmlWebpackPlugin.options.section.about.imageHref %>" 
-              alt="profile image">
-          </figure>
+      <div class="about">
+        <h2 class="about-title"><%= htmlWebpackPlugin.options.section.about.title %></h2>
+        <div class="about-body">
+          <div class="about-body-image">
+            <figure class="image">
+              <img 
+                class="lozad" 
+                data-src="<%= htmlWebpackPlugin.options.section.about.imageHref %>" 
+                alt="profile image">
+            </figure>
+          </div>
+          <div class="about-body-desc">
+            <%= htmlWebpackPlugin.options.section.about.description %>
+          </div>
         </div>
-        <div><%= htmlWebpackPlugin.options.section.about.description %></div>
       </div>
     </div>
   </section>
   <!-- ABOUT END -->
   
   <!-- PROJECTS START -->
-  <section class="projects">
-    <div class="container">
-      <div class="projects-title">
-        <h2><%= htmlWebpackPlugin.options.section.projects.title %></h2>
-      </div>
+  <section class="section has-bg-light">
+    <div class="container projects">
+      
+      <h2 class="projects-title">
+        <%= htmlWebpackPlugin.options.section.projects.title %>
+      </h2>
         
       <% htmlWebpackPlugin.options.section.projects.items.forEach((item, i) => { %>
         <div class="projects-item">
           <h3 class="projects-item-title"><%= item.title %></h3>
           <div class="projects-item-body">
           <% if (((i+1) % 2) == 0) { %>
-            <div class="projects-item-text">
+            <div class="projects-item-body-text">
               <div>
                 <%= item.description %>
               </div>
               <div style="padding-top:2rem;">
-                <a class="projects-item-live-button" href="<%= item.liveLink %>">
-                  <strong>Live</strong>
+                <a class="button" href="<%= item.liveLink %>">
+                  <strong>See live</strong>
                 </a>
               </div>
             </div>
-            <div class="projects-item-image">
+            <div class="projects-item-body-image">
               <a href="<%= item.liveLink %>">
-                <figure class="projects-item-image-figure">
-                  <img class="lozad" data-src="<%= item.imageHref %>" alt="<%= item.title %>">
+                <figure class="image" style="padding-top: 56.25%;">
+                  <img class="lozad has-shadow" data-src="<%= item.imageHref %>" alt="<%= item.title %>">
                 </figure>
               </a>
             </div>
           <% } else { %>
-            <div class="projects-item-image">
+            <div class="projects-item-body-image">
               <a href="<%= item.liveLink %>">
-                <figure class="projects-item-image-figure">
-                  <img class="lozad" data-src="<%= item.imageHref %>" alt="<%= item.title %>">
+                <figure class="image" style="padding-top: 56.25%;">
+                  <img class="lozad has-shadow" data-src="<%= item.imageHref %>" alt="<%= item.title %>">
                 </figure>
               </a>
             </div>
-            <div class="projects-item-text">
+            <div class="projects-item-body-text">
               <div>
                 <%= item.description %>
               </div>
               <div style="padding-top:2rem;">
-                <a class="projects-item-live-button" href="<%= item.liveLink %>">
-                  <strong>Live</strong>
+                <a class="button" href="<%= item.liveLink %>">
+                  <strong>See live</strong>
                 </a>
               </div>
             </div>
@@ -127,12 +135,12 @@
   <!-- PROJECTS END -->
   
   <!-- CONTACTS START -->
-  <footer class="contacts">
-    <div class="container">
+  <footer class="section has-bg-dark has-text-light">
+    <div class="container contacts">
       
-      <div class="contacts-title">
-        <h2><%= htmlWebpackPlugin.options.section.contacts.title %></h2>
-      </div>
+      <h2 class="contacts-title">
+        <%= htmlWebpackPlugin.options.section.contacts.title %>
+      </h2>
       
       <% if (htmlWebpackPlugin.options.section.contacts.email) { %>
         <p class="contacts-email">

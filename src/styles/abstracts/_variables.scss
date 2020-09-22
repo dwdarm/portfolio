@@ -7,8 +7,9 @@ $large: 1200px;
 
 /* colors */
 $primary-color: hsl(217, 71%, 53%);
-$text-color: hsl(0, 0%, 21%);
+$dark-color: hsl(0, 0%, 21%);
 $light-color: hsl(0, 0%, 96%);
+$text-color: $dark-color;
 $link-color: $text-color;
 $link-hover-color: $primary-color;
 

@@ -1,53 +1,53 @@
-.contacts  {
-  width: 100%;
-  background-color: $text-color;
-  color: $light-color;
-}
+@charset "utf-8";
 
-.contacts > .container {
-  padding: 3rem 1.5rem;
-  color: $light-color;
+.contacts {
   text-align: center;
-  .contacts-title {
+  
+  &-title {
     margin-bottom: 2.5rem;
-    h2 {
-      font-size: 1.5rem;
-      //opacity: 0;
-      //transition: 1s;
-    }
+    font-size: 1.5rem;
+    //opacity: 0;
+    //transition: 1s;
   }
-  .contacts-email {
+  
+  &-email {
+    font-size: 1.25rem;
     a {
       text-decoration: none;
       color: $light-color;
       font-weight: 550;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
-  .contacts-list {
+  
+  &-list {
     display: flex;
     justify-content: center;
-    .contacts-list-item {
+    &-item {
       margin: 1rem 2rem 2rem 2rem;
       text-decoration: none;
       font-size: 1.8rem;
       color: $light-color;
       &:hover {
         transform: scale(1.2, 1.2);
+        color: $light-color;
       }
     }
   }
-  .contacts-footer {
+  
+  &-footer {
     font-size: 0.75rem;
   }
+  
 }
 
 @media screen and (min-width: $medium) {
-  .contacts > .container {
+  .contacts {
   
-    .contacts-title {
-      h2 {
-        font-size: 2rem;
-      }
+    &-title {
+      font-size: 2rem;
     }
     
   }

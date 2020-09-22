@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.has-text-primary {
+  color: $primary-color;
+}
+
+.has-text-light {
+  color: $light-color;
+}
+
+.has-bg-primary {
+  background-color: $primary-color;
+}
+
+.has-bg-light {
+  background-color: $light-color;
+}
+
+.has-bg-dark {
+  background-color: $dark-color;
+}

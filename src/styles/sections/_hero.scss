@@ -1,54 +1,44 @@
 @charset "utf-8";
 
-@keyframes bounce {
-  0% { 
-    transform: translateY(0px); 
-  }
-  20% { 
-    transform: translateY(-5px); 
-  }
-  40% { 
-    transform: translateY(0px); 
-  }
-  60% { 
-    transform: translateY(5px); 
-  }
-  100% { 
-    transform: translateY(0px); 
-  }
-}
-
-.hero  {
-  width: 100%;
-}
-
-.hero > .container {
+.hero {
   display: flex;
-  height: 100vh;
-  padding-bottom: 2rem;
+  min-height: 100vh;
+  width: 100%;
+  background-color: $light-color;
+  padding-bottom: 1rem;
   flex-direction: column;
   justify-content: space-between;
-  .hero-body {
+  
+  &-head {
+  }
+  
+  &-body {
     text-align: center;
     padding: 0 3rem;
-    h1 {
+    .hero-body-title {
       font-size: 2.5rem;
       opacity: 0;
       transform: translateX(10px);
       transition: opacity 1s, transform 1s;
     }
-    p {
+    .hero-body-subtitle {
       line-height: 1.5rem;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 1s 0.5s, transform 1s 0.5s;
+      margin-bottom: 3rem;
+    }
+    .hero-body-action {
       opacity: 0;
       transform: translateX(-10px);
       transition: opacity 1s 0.5s, transform 1s 0.5s;
     }
   }
-  .hero-scroll {
+  
+  &-footer {
     text-align: center;
     opacity: 0;
     transition: opacity 1s 1s;
-    animation: bounce 1.5s linear infinite;
     a {
       text-decoration: none;
     }
@@ -56,10 +46,11 @@
 }
 
 @media screen and (min-width: $medium) {
-  .hero > .container {
-    .hero-body {
+  .hero {
+    &-body {
+      padding: 0 6rem;
       text-align: left;
-      h1 {
+      .hero-body-title {
         font-size: 4rem;
       }
     }

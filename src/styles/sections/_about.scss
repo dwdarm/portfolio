@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+.about {
+  
+  &-title {
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    //opacity: 0;
+    //transition: 1s;
+  }
+  
+  &-body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    &-image {
+      margin: 0 auto;
+      margin-bottom: 3rem;
+      width: 100%;
+      max-width: 350px;
+    }
+    
+  }
+  
+}
+
+@media screen and (min-width: $medium) {
+  .about {
+  
+    &-title {
+      font-size: 2rem;
+    }
+    
+    &-body {
+      flex-direction: row;
+      text-align: left;
+      
+      &-image {
+        min-width: 350px;
+        margin: 0;
+        margin-right: 3rem;
+      }
+      
+    }
+  }
+}
